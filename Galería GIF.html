@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería GIF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Galería GIF</h1>
+    </header>
+    <nav>
+        <a href="mi_pagina.html">Volver a la Página Principal</a>
+    </nav>
+    <div class="contenido">
+        <section style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div class="gif-container">
+                <img src="oye gelda.jpg" alt="GIF 1" class="gif-img" id="img-oyegelda">
+                <audio id="audio-oyegelda" src="oye gelda.mp3"></audio>
+                <style>
+                    #img-oyegelda {
+                        cursor: pointer;
+                        transition: transform 0.3s;
+                    }
+                    #img-oyegelda.grande {
+                        transform: scale(1.3);
+                        z-index: 2;
+                    }
+                </style>
+            </div>
+            <div class="gif-container">
+                <img src="Imagen 6.jpg" alt="GIF 2" class="gif-img" id="img-gif2">
+                <audio id="audio-gif2" src="Audio.mp3"></audio>
+                <style>
+                    #img-gif2 {
+                        cursor: pointer;
+                        transition: transform 0.3s;
+                    }
+                    #img-gif2.grande {
+                        transform: scale(1.3);
+                        z-index: 2;
+                    }
+                </style>
+            </div>
+            <div class="gif-container">
+                <img src="Sena.jpg" alt="GIF 3" class="gif-img" id="img-gif3">
+                <audio id="audio-gif3" src="ingles.mp3"></audio>
+                <style>
+                    #img-gif3 {
+                        cursor: pointer;
+                        transition: transform 0.3s;
+                    }
+                    #img-gif3.grande {
+                        transform: scale(1.3);
+                        z-index: 2;
+                    }
+                </style>
+            </div>
+            <div class="gif-container">
+                <img src="sena1.jpg" alt="GIF 4" class="gif-img">
+            </div>
+        </section>
+        <script>
+            // Para "oye gelda"
+            const imgOye = document.getElementById('img-oyegelda');
+            const audioOye = document.getElementById('audio-oyegelda');
+            let sonandoOye = false;
+            imgOye.onclick = function() {
+                if (!sonandoOye) {
+                    imgOye.classList.add('grande');
+                    audioOye.currentTime = 0;
+                    audioOye.play();
+                    sonandoOye = true;
+                    setTimeout(() => {
+                        imgOye.classList.remove('grande');
+                        sonandoOye = false;
+                    }, 43000);
+                } else {
+                    audioOye.pause();
+                    audioOye.currentTime = 0;
+                    imgOye.classList.remove('grande');
+                    sonandoOye = false;
+                }
+            };
+
+            // Para "Imagen 6"
+            const imgGif2 = document.getElementById('img-gif2');
+            const audioGif2 = document.getElementById('audio-gif2');
+            let sonandoGif2 = false;
+            imgGif2.onclick = function() {
+                if (!sonandoGif2) {
+                    imgGif2.classList.add('grande');
+                    audioGif2.currentTime = 0;
+                    audioGif2.play();
+                    sonandoGif2 = true;
+                    setTimeout(() => {
+                        imgGif2.classList.remove('grande');
+                        sonandoGif2 = false;
+                    }, 5000);
+                } else {
+                    audioGif2.pause();
+                    audioGif2.currentTime = 0;
+                    imgGif2.classList.remove('grande');
+                    sonandoGif2 = false;
+                }
+            };
+
+            // Para "Sena"
+            const imgGif3 = document.getElementById('img-gif3');
+            const audioGif3 = document.getElementById('audio-gif3');
+            let sonandoGif3 = false;
+            imgGif3.onclick = function() {
+                if (!sonandoGif3) {
+                    imgGif3.classList.add('grande');
+                    audioGif3.currentTime = 0;
+                    audioGif3.play();
+                    sonandoGif3 = true;
+                    setTimeout(() => {
+                        imgGif3.classList.remove('grande');
+                        sonandoGif3 = false;
+                    }, 7000);
+                } else {
+                    audioGif3.pause();
+                    audioGif3.currentTime = 0;
+                    imgGif3.classList.remove('grande');
+                    sonandoGif3 = false;
+                }
+            };
+        </script>
+    </div>
+    <footer>
+        <p>&copy; 2025 Rufay Gutierrez. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

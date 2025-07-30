@@ -1,0 +1,42 @@
+ body {
+            font-family: Arial, sans-serif; /* Fuente del texto */
+            margin: 0; /* Elimina el margen por defecto */
+            padding: 0; /* Elimina el padding por defecto */
+            background: #f0f0f0; /* Color de fondo de la página */
+            cursor: grab; /* Cambia el cursor a una mano en todo el body */
+        }
+        header, footer {
+            background: #333; /* Fondo oscuro para encabezado y pie */
+            color: #fff; /* Texto blanco */
+            text-align: center; /* Centra el texto */
+            padding: 20px 0; /* Espaciado arriba y abajo */
+        }
+        nav {
+            background: #444; /* Fondo del menú de navegación */
+            padding: 10px; /* Espaciado interno */
+            text-align: center; /* Centra los enlaces */
+        }
+        nav a {
+            color: #fff; /* Color de los enlaces */
+            margin: 0 20px; /* Espacio entre enlaces */
+            text-decoration: none; /* Sin subrayado */
+            font-weight: bold; /* Texto en negrita */
+            cursor: pointer; /* Cambia el cursor a cruz sobre los enlaces */
+        }
+        .contenido {
+            max-width: 800px; /* Ancho máximo del contenido */
+            margin: 30px auto; /* Centra el contenido y agrega margen arriba/abajo */
+            background: #fff; /* Fondo blanco para el contenido */
+            padding: 30px; /* Espaciado interno */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 0 10px #aaa; /* Sombra alrededor del contenido */
+            cursor: pointer; /* Cambia el cursor a cruz sobre el contenido */
+        }
+        .gif-img {
+            width: 200px; /* Ancho de las imágenes GIF */
+            margin: 10px; /* Espacio alrededor de las imágenes */
+            border-radius: 10px; /* Bordes redondeados en las imágenes */
+            box-shadow: 0 0 5px #aaa; /* Sombra alrededor de las imágenes */
+            transition: transform 0.3s; /* Transición suave al hacer hover */
+            cursor: grabbing;  
+        }
